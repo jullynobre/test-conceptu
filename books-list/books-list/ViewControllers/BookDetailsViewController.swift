@@ -11,25 +11,26 @@ import UIKit
 class BookDetailsViewController: UIViewController {
 
     private var bookDetailsView: BookDetailsView?
-
+    private var item: Item?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setUpView()
+        loadViewData()
     }
     
-    func setUpView() {
+    private func setUpView() {
         self.bookDetailsView = BookDetailsView()
         self.view = self.bookDetailsView
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    private func loadViewData() {
+        self.bookDetailsView?.bookTitle.text = self.item?.volumeInfo.title
+        self.bookDetailsView?.bookDescription.text = self.item?.volumeInfo.description ?? "This book has no description."
     }
-    */
-
+    
+    func setItem(item: Item) {
+        self.item = item
+    }
 }
