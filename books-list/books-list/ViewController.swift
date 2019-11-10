@@ -9,10 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var booksTableView: UITableView!
+    var bookList: [Item] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.booksTableView.delegate = self
+        self.booksTableView.dataSource = self
+    }
+    
+    func loadBooks() {
         APIManager.shared.books(byAuthor: "Tolkien") { (items, error) in
             guard let items = items else { return }
             items.forEach { (item) in
@@ -20,7 +28,7 @@ class ViewController: UIViewController {
             }
         }
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.prefersLargeTitles = true
     }
@@ -30,3 +38,16 @@ class ViewController: UIViewController {
     }
 }
 
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        self.bookList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = self.bookList[indexPath.row].volumeInfo.title
+        return cell
+    }
+    
+    
+}
