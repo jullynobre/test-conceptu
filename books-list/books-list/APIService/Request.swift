@@ -55,8 +55,12 @@ class Request<T: EndPointType>: NetworkProtocol {
         
         self.task = session.dataTask(with: request) { (data, _, error) in
             guard let responseData = data, error == nil else {
-                print("Request Error:", error!.localizedDescription)
-                return DispatchQueue.main.async { completion(nil, NetworkError.failRequest) }
+                
+                return DispatchQueue.main.async {
+                    print("Request Error:", error!.localizedDescription)
+                    completion(nil, NetworkError.failRequest)
+                    
+                }
             }
             guard let uiImage = UIImage(data: responseData) else {
                 return DispatchQueue.main.async { completion(nil, NetworkError.failRequest) }

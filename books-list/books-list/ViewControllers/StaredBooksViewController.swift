@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  StaredBooksViewController.swift
 //  books-list
 //
 //  Created by Diuli Nobre on 10/11/19.
@@ -8,19 +8,25 @@
 
 import UIKit
 
-class BooksViewController: UIViewController {
+class StaredBooksViewController: UIViewController {
     
     var bookList: [Item] = []
-    
     private var booksView: BooksView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Books"
-        
-        setUpView()
-        loadBooks()
-        configureBarButton()
+        self.title = "Stared Books"
+       
+        self.setUpView()
+        //self.loadBooks()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if !self.bookList.isEmpty {
+            self.bookList = []
+            self.booksView?.booksTableView.reloadData()
+        }
+        self.loadBooks()
     }
     
     private func setUpView() {
@@ -31,30 +37,21 @@ class BooksViewController: UIViewController {
     }
     
     private func loadBooks() {
-        APIManager.shared.books(byAuthor: "Tolkien") { (items, error) in
-            guard let items = items else { return }
-            items.forEach { (item) in
-                self.bookList.append(item)
-                let newRowIndexPath = IndexPath.init(row: self.bookList.count - 1, section: 0)
-                self.booksView?.booksTableView.insertRows(at: [newRowIndexPath], with: .automatic)
+        let starredBooks = UserDefaults.standard.stringArray(forKey: "StaredBooks")
+        starredBooks?.forEach({ (bookId) in
+            APIManager.shared.book(byId: bookId) { (item, error) in
+                if item != nil {
+                    self.bookList.append(item!)
+                    let newRowIndexPath = IndexPath.init(row: self.bookList.count - 1, section: 0)
+                    self.booksView?.booksTableView.insertRows(at: [newRowIndexPath], with: .automatic)
+                }
             }
-        }
-    }
-    
-    private func configureBarButton() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(
-            title: "Stared Books",
-            style: .plain, target: self,
-            action: #selector(pushStaredBooksViewController)
-        )
-    }
-    
-    @objc private func pushStaredBooksViewController() {
-        self.navigationController?.pushViewController(StaredBooksViewController(), animated: true)
+        })
     }
 }
 
-extension BooksViewController: UITableViewDelegate, UITableViewDataSource {
+extension StaredBooksViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         self.bookList.count
     }

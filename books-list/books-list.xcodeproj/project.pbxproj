@@ -21,6 +21,8 @@
 		57232C1423787DDC009BBC47 /* BookDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57232C1323787DDC009BBC47 /* BookDetailsViewController.swift */; };
 		57CB02CC2378866500CA8B9A /* BooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CB02CB2378866500CA8B9A /* BooksView.swift */; };
 		57CB02D1237887F000CA8B9A /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CB02D0237887F000CA8B9A /* ViewCode.swift */; };
+		57CB02D323788E9700CA8B9A /* BookDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CB02D223788E9700CA8B9A /* BookDetailsView.swift */; };
+		57CB02D52378BE2300CA8B9A /* StaredBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CB02D42378BE2300CA8B9A /* StaredBooksViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		57232BE223784AF5009BBC47 /* books-list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "books-list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		57232BE223784AF5009BBC47 /* Tolkien Books.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tolkien Books.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57232BE523784AF5009BBC47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57232BE723784AF5009BBC47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		57232BE923784AF5009BBC47 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +54,8 @@
 		57232C1323787DDC009BBC47 /* BookDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewController.swift; sourceTree = "<group>"; };
 		57CB02CB2378866500CA8B9A /* BooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksView.swift; sourceTree = "<group>"; };
 		57CB02D0237887F000CA8B9A /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
+		57CB02D223788E9700CA8B9A /* BookDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsView.swift; sourceTree = "<group>"; };
+		57CB02D42378BE2300CA8B9A /* StaredBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaredBooksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +88,7 @@
 		57232BE323784AF5009BBC47 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				57232BE223784AF5009BBC47 /* books-list.app */,
+				57232BE223784AF5009BBC47 /* Tolkien Books.app */,
 				57232BF823784AF6009BBC47 /* books-listTests.xctest */,
 			);
 			name = Products;
@@ -130,8 +134,9 @@
 		57232C1223787DB6009BBC47 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				57232C1323787DDC009BBC47 /* BookDetailsViewController.swift */,
 				57232BE923784AF5009BBC47 /* BooksViewController.swift */,
+				57CB02D42378BE2300CA8B9A /* StaredBooksViewController.swift */,
+				57232C1323787DDC009BBC47 /* BookDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				57CB02CB2378866500CA8B9A /* BooksView.swift */,
+				57CB02D223788E9700CA8B9A /* BookDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,7 +175,7 @@
 			);
 			name = "books-list";
 			productName = "books-list";
-			productReference = 57232BE223784AF5009BBC47 /* books-list.app */;
+			productReference = 57232BE223784AF5009BBC47 /* Tolkien Books.app */;
 			productType = "com.apple.product-type.application";
 		};
 		57232BF723784AF6009BBC47 /* books-listTests */ = {
@@ -255,7 +261,9 @@
 				57232C112378705F009BBC47 /* APIManager.swift in Sources */,
 				57232BEA23784AF5009BBC47 /* BooksViewController.swift in Sources */,
 				57232C092378502F009BBC47 /* Request.swift in Sources */,
+				57CB02D52378BE2300CA8B9A /* StaredBooksViewController.swift in Sources */,
 				57232C0D237853A0009BBC47 /* NetworkProtocol.swift in Sources */,
+				57CB02D323788E9700CA8B9A /* BookDetailsView.swift in Sources */,
 				57232C1423787DDC009BBC47 /* BookDetailsViewController.swift in Sources */,
 				57232BE623784AF5009BBC47 /* AppDelegate.swift in Sources */,
 				57232C0F23785574009BBC47 /* BookCodableStructs.swift in Sources */,
@@ -422,7 +430,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "diuli.nobre.books-list";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Tolkien Books";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -440,7 +448,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "diuli.nobre.books-list";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Tolkien Books";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -464,7 +472,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/books-list.app/books-list";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tolkien Books.app/Tolkien Books";
 			};
 			name = Debug;
 		};
@@ -486,7 +494,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/books-list.app/books-list";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tolkien Books.app/Tolkien Books";
 			};
 			name = Release;
 		};
