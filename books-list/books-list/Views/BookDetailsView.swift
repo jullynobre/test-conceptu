@@ -27,6 +27,7 @@ class BookDetailsView: UIView {
         let bookTitle = UILabel()
         bookTitle.text = "Book Title"
         bookTitle.numberOfLines = 0
+        bookTitle.font = .systemFont(ofSize: 22, weight: .semibold)
         bookTitle.translatesAutoresizingMaskIntoConstraints = false
         return bookTitle
     }()
