@@ -17,6 +17,7 @@
 		57232C092378502F009BBC47 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57232C082378502F009BBC47 /* Request.swift */; };
 		57232C0B237850C1009BBC47 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57232C0A237850C1009BBC47 /* APIEndpoint.swift */; };
 		57232C0D237853A0009BBC47 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57232C0C237853A0009BBC47 /* NetworkProtocol.swift */; };
+		57232C0F23785574009BBC47 /* BookCodableStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57232C0E23785574009BBC47 /* BookCodableStructs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		57232C082378502F009BBC47 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		57232C0A237850C1009BBC47 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		57232C0C237853A0009BBC47 /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
+		57232C0E23785574009BBC47 /* BookCodableStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCodableStructs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				57232C0C237853A0009BBC47 /* NetworkProtocol.swift */,
 				57232C0A237850C1009BBC47 /* APIEndpoint.swift */,
 				57232C082378502F009BBC47 /* Request.swift */,
+				57232C0E23785574009BBC47 /* BookCodableStructs.swift */,
 			);
 			path = APIService;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				57232C092378502F009BBC47 /* Request.swift in Sources */,
 				57232C0D237853A0009BBC47 /* NetworkProtocol.swift in Sources */,
 				57232BE623784AF5009BBC47 /* AppDelegate.swift in Sources */,
+				57232C0F23785574009BBC47 /* BookCodableStructs.swift in Sources */,
 				57232BE823784AF5009BBC47 /* SceneDelegate.swift in Sources */,
 				57232C0B237850C1009BBC47 /* APIEndpoint.swift in Sources */,
 			);
