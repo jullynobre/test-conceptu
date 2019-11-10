@@ -67,8 +67,8 @@ extension BookDetailsView: ViewCode {
         ])
         NSLayoutConstraint.activate([
             bookImage.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 16),
-            bookImage.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            bookImage.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            bookImage.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.5),
+            bookImage.centerXAnchor.constraint(equalToSystemSpacingAfter: safeAreaLayoutGuide.centerXAnchor, multiplier: 1),
             bookImage.heightAnchor.constraint(equalTo: bookImage.widthAnchor, multiplier: 1.5)
         ])
         NSLayoutConstraint.activate([
