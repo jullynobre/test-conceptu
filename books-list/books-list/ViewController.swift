@@ -18,13 +18,17 @@ class ViewController: UIViewController {
         
         self.booksTableView.delegate = self
         self.booksTableView.dataSource = self
+        
+        loadBooks()
     }
     
     func loadBooks() {
         APIManager.shared.books(byAuthor: "Tolkien") { (items, error) in
             guard let items = items else { return }
             items.forEach { (item) in
-                print(item.volumeInfo.title)
+                self.bookList.append(item)
+                let newRowIndexPath = IndexPath.init(row: self.bookList.count - 1, section: 0)
+                self.booksTableView.insertRows(at: [newRowIndexPath], with: .automatic)
             }
         }
     }
