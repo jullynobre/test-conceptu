@@ -41,7 +41,7 @@
         <!--Book Details-->
         <scene sceneID="XXo-MU-JGU">
             <objects>
-                <viewController title="Book Details" id="nam-Ej-Cjo" customClass="BookDetailsViewController" customModule="books_list" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BookDetails" title="Book Details" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nam-Ej-Cjo" customClass="BookDetailsViewController" customModule="books_list" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Npm-HK-zXR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
