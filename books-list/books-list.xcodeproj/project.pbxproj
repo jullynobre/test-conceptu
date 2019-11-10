@@ -22,6 +22,7 @@
 		57CB02CC2378866500CA8B9A /* BooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CB02CB2378866500CA8B9A /* BooksView.swift */; };
 		57CB02D1237887F000CA8B9A /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CB02D0237887F000CA8B9A /* ViewCode.swift */; };
 		57CB02D323788E9700CA8B9A /* BookDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CB02D223788E9700CA8B9A /* BookDetailsView.swift */; };
+		57CB02D52378BE2300CA8B9A /* StaredBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CB02D42378BE2300CA8B9A /* StaredBooksViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		57CB02CB2378866500CA8B9A /* BooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksView.swift; sourceTree = "<group>"; };
 		57CB02D0237887F000CA8B9A /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 		57CB02D223788E9700CA8B9A /* BookDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsView.swift; sourceTree = "<group>"; };
+		57CB02D42378BE2300CA8B9A /* StaredBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaredBooksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				57232BE923784AF5009BBC47 /* BooksViewController.swift */,
+				57CB02D42378BE2300CA8B9A /* StaredBooksViewController.swift */,
 				57232C1323787DDC009BBC47 /* BookDetailsViewController.swift */,
 			);
 			path = ViewControllers;
@@ -258,6 +261,7 @@
 				57232C112378705F009BBC47 /* APIManager.swift in Sources */,
 				57232BEA23784AF5009BBC47 /* BooksViewController.swift in Sources */,
 				57232C092378502F009BBC47 /* Request.swift in Sources */,
+				57CB02D52378BE2300CA8B9A /* StaredBooksViewController.swift in Sources */,
 				57232C0D237853A0009BBC47 /* NetworkProtocol.swift in Sources */,
 				57CB02D323788E9700CA8B9A /* BookDetailsView.swift in Sources */,
 				57232C1423787DDC009BBC47 /* BookDetailsViewController.swift in Sources */,

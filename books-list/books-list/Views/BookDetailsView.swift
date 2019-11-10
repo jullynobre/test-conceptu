@@ -34,7 +34,7 @@ class BookDetailsView: UIView {
     
     lazy var bookDescription: UILabel = {
         let bookDescription = UILabel()
-        bookDescription.text = "The content elements of your scroll view must have left / top / width / height values. In the case of objects such as labels, they have intrinsic sizes, so you only have to define the left & top"
+        bookDescription.text = "Book Description"
         bookDescription.numberOfLines = 0
         bookDescription.translatesAutoresizingMaskIntoConstraints = false
         return bookDescription
