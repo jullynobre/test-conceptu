@@ -18,6 +18,7 @@
 		57232C0B237850C1009BBC47 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57232C0A237850C1009BBC47 /* APIEndpoint.swift */; };
 		57232C0D237853A0009BBC47 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57232C0C237853A0009BBC47 /* NetworkProtocol.swift */; };
 		57232C0F23785574009BBC47 /* BookCodableStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57232C0E23785574009BBC47 /* BookCodableStructs.swift */; };
+		57232C112378705F009BBC47 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57232C102378705F009BBC47 /* APIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		57232C0A237850C1009BBC47 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		57232C0C237853A0009BBC47 /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
 		57232C0E23785574009BBC47 /* BookCodableStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCodableStructs.swift; sourceTree = "<group>"; };
+		57232C102378705F009BBC47 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				57232C0A237850C1009BBC47 /* APIEndpoint.swift */,
 				57232C082378502F009BBC47 /* Request.swift */,
 				57232C0E23785574009BBC47 /* BookCodableStructs.swift */,
+				57232C102378705F009BBC47 /* APIManager.swift */,
 			);
 			path = APIService;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57232C112378705F009BBC47 /* APIManager.swift in Sources */,
 				57232BEA23784AF5009BBC47 /* ViewController.swift in Sources */,
 				57232C092378502F009BBC47 /* Request.swift in Sources */,
 				57232C0D237853A0009BBC47 /* NetworkProtocol.swift in Sources */,

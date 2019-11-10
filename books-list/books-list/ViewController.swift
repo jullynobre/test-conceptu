@@ -12,7 +12,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        APIManager.shared.books(byAuthor: "Tolkien") { (items, error) in
+            guard let items = items else { return }
+            items.forEach { (item) in
+                print(item.volumeInfo.title)
+            }
+        }
     }
 
 
