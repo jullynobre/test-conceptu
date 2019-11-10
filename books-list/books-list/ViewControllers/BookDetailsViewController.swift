@@ -28,6 +28,15 @@ class BookDetailsViewController: UIViewController {
     private func loadViewData() {
         self.bookDetailsView?.bookTitle.text = self.item?.volumeInfo.title
         self.bookDetailsView?.bookDescription.text = self.item?.volumeInfo.description ?? "This book has no description."
+        
+        let imageURL = self.item?.volumeInfo.imageLinks?.large ?? self.item?.volumeInfo.imageLinks?.medium ?? self.item?.volumeInfo.imageLinks?.thumbnail ?? ""
+        Request<BooksAPI>().loadImage(from: imageURL) { (image, error) in
+            if image != nil {
+                DispatchQueue.main.async {
+                    self.bookDetailsView?.bookImage.image = image
+                }
+            }
+        }
     }
     
     func setItem(item: Item) {
