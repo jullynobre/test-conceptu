@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import books_list
+@testable import Tolkien_Books
 
 class books_listTests: XCTestCase {
 
