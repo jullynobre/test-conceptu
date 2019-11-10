@@ -45,8 +45,9 @@ class BookDetailsViewController: UIViewController {
     
     private func configureBarButton() {
         let starredBooks = UserDefaults.standard.stringArray(forKey: "StaredBooks")
-        self.indexInStaerdBooks = starredBooks!.firstIndex(of: item!.id)
-        
+        if starredBooks != nil {
+            self.indexInStaerdBooks = starredBooks!.firstIndex(of: item!.id)
+        }
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             title: self.indexInStaerdBooks != nil ? "Unstar" : "Star",
             style: .plain, target: self,
@@ -61,6 +62,9 @@ class BookDetailsViewController: UIViewController {
     
     @objc func starButtonTapped() {
         var starredBooks = UserDefaults.standard.stringArray(forKey: "StaredBooks")
+        if starredBooks == nil {
+            starredBooks = []
+        }
         //Stars the book and save to User Defaults
         if self.indexInStaerdBooks == nil {
             starredBooks?.append(self.item!.id)
