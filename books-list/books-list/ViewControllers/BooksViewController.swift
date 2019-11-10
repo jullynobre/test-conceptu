@@ -16,13 +16,17 @@ class BooksViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Books"
         
+        setUpView()
+        loadBooks()
+    }
+    
+    func setUpView() {
         self.booksView = BooksView()
         booksView?.booksTableView.delegate = self
         booksView?.booksTableView.dataSource = self
         self.view = self.booksView
-
-        loadBooks()
     }
     
     func loadBooks() {
