@@ -36,7 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		57232BE223784AF5009BBC47 /* books-list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "books-list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		57232BE223784AF5009BBC47 /* Tolkien Books.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tolkien Books.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57232BE523784AF5009BBC47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57232BE723784AF5009BBC47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		57232BE923784AF5009BBC47 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 		57232BE323784AF5009BBC47 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				57232BE223784AF5009BBC47 /* books-list.app */,
+				57232BE223784AF5009BBC47 /* Tolkien Books.app */,
 				57232BF823784AF6009BBC47 /* books-listTests.xctest */,
 			);
 			name = Products;
@@ -175,7 +175,7 @@
 			);
 			name = "books-list";
 			productName = "books-list";
-			productReference = 57232BE223784AF5009BBC47 /* books-list.app */;
+			productReference = 57232BE223784AF5009BBC47 /* Tolkien Books.app */;
 			productType = "com.apple.product-type.application";
 		};
 		57232BF723784AF6009BBC47 /* books-listTests */ = {
@@ -430,7 +430,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "diuli.nobre.books-list";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Tolkien Books";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -448,7 +448,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "diuli.nobre.books-list";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Tolkien Books";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
