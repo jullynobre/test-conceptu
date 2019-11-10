@@ -63,6 +63,6 @@ extension BooksViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        let viewController = UIStoryboard.init(name: "Main", bundle: Bundle.main)
 //            .instantiateViewController(withIdentifier: "BookDetails") as! BookDetailsViewController
-//        self.navigationController?.pushViewController(viewController, animated: true)
+        self.navigationController?.pushViewController(BookDetailsViewController(), animated: true)
     }
 }

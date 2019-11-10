@@ -10,13 +10,18 @@ import UIKit
 
 class BookDetailsViewController: UIViewController {
 
+    private var bookDetailsView: BookDetailsView?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setUpView()
     }
     
-
+    func setUpView() {
+        self.bookDetailsView = BookDetailsView()
+        self.view = self.bookDetailsView
+    }
     /*
     // MARK: - Navigation
 
