@@ -14,6 +14,11 @@
 		57232BEF23784AF6009BBC47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57232BEE23784AF6009BBC47 /* Assets.xcassets */; };
 		57232BF223784AF6009BBC47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57232BF023784AF6009BBC47 /* LaunchScreen.storyboard */; };
 		57232BFD23784AF6009BBC47 /* books_listTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57232BFC23784AF6009BBC47 /* books_listTests.swift */; };
+		57232C092378502F009BBC47 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57232C082378502F009BBC47 /* Request.swift */; };
+		57232C0B237850C1009BBC47 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57232C0A237850C1009BBC47 /* APIEndpoint.swift */; };
+		57232C0D237853A0009BBC47 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57232C0C237853A0009BBC47 /* NetworkProtocol.swift */; };
+		57232C0F23785574009BBC47 /* BookCodableStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57232C0E23785574009BBC47 /* BookCodableStructs.swift */; };
+		57232C112378705F009BBC47 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57232C102378705F009BBC47 /* APIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,11 @@
 		57232BF823784AF6009BBC47 /* books-listTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "books-listTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57232BFC23784AF6009BBC47 /* books_listTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = books_listTests.swift; sourceTree = "<group>"; };
 		57232BFE23784AF6009BBC47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57232C082378502F009BBC47 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		57232C0A237850C1009BBC47 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		57232C0C237853A0009BBC47 /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
+		57232C0E23785574009BBC47 /* BookCodableStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCodableStructs.swift; sourceTree = "<group>"; };
+		57232C102378705F009BBC47 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +89,7 @@
 		57232BE423784AF5009BBC47 /* books-list */ = {
 			isa = PBXGroup;
 			children = (
+				57232C072378501D009BBC47 /* APIService */,
 				57232BE523784AF5009BBC47 /* AppDelegate.swift */,
 				57232BE723784AF5009BBC47 /* SceneDelegate.swift */,
 				57232BE923784AF5009BBC47 /* ViewController.swift */,
@@ -97,6 +108,18 @@
 				57232BFE23784AF6009BBC47 /* Info.plist */,
 			);
 			path = "books-listTests";
+			sourceTree = "<group>";
+		};
+		57232C072378501D009BBC47 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				57232C0C237853A0009BBC47 /* NetworkProtocol.swift */,
+				57232C0A237850C1009BBC47 /* APIEndpoint.swift */,
+				57232C082378502F009BBC47 /* Request.swift */,
+				57232C0E23785574009BBC47 /* BookCodableStructs.swift */,
+				57232C102378705F009BBC47 /* APIManager.swift */,
+			);
+			path = APIService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,9 +223,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57232C112378705F009BBC47 /* APIManager.swift in Sources */,
 				57232BEA23784AF5009BBC47 /* ViewController.swift in Sources */,
+				57232C092378502F009BBC47 /* Request.swift in Sources */,
+				57232C0D237853A0009BBC47 /* NetworkProtocol.swift in Sources */,
 				57232BE623784AF5009BBC47 /* AppDelegate.swift in Sources */,
+				57232C0F23785574009BBC47 /* BookCodableStructs.swift in Sources */,
 				57232BE823784AF5009BBC47 /* SceneDelegate.swift in Sources */,
+				57232C0B237850C1009BBC47 /* APIEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
