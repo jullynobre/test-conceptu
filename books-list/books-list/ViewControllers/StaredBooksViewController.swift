@@ -18,17 +18,25 @@ class StaredBooksViewController: UIViewController {
         self.title = "Stared Books"
        
         self.setUpView()
+        //self.loadBooks()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if !self.bookList.isEmpty {
+            self.bookList = []
+            self.booksView?.booksTableView.reloadData()
+        }
         self.loadBooks()
     }
     
-    func setUpView() {
+    private func setUpView() {
         self.booksView = BooksView()
         booksView?.booksTableView.delegate = self
         booksView?.booksTableView.dataSource = self
         self.view = self.booksView
     }
     
-    func loadBooks() {
+    private func loadBooks() {
         let starredBooks = UserDefaults.standard.stringArray(forKey: "StaredBooks")
         starredBooks?.forEach({ (bookId) in
             APIManager.shared.book(byId: bookId) { (item, error) in
@@ -41,7 +49,9 @@ class StaredBooksViewController: UIViewController {
         })
     }
 }
+
 extension StaredBooksViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         self.bookList.count
     }
