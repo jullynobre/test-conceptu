@@ -8,17 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class BooksViewController: UIViewController {
     
-    @IBOutlet weak var booksTableView: UITableView!
     var bookList: [Item] = []
+    
+    private var booksView: BooksView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.booksTableView.delegate = self
-        self.booksTableView.dataSource = self
-        
+        self.booksView = BooksView()
+        booksView?.booksTableView.delegate = self
+        booksView?.booksTableView.dataSource = self
+        self.view = self.booksView
+
         loadBooks()
     }
     
@@ -28,7 +31,7 @@ class ViewController: UIViewController {
             items.forEach { (item) in
                 self.bookList.append(item)
                 let newRowIndexPath = IndexPath.init(row: self.bookList.count - 1, section: 0)
-                self.booksTableView.insertRows(at: [newRowIndexPath], with: .automatic)
+                self.booksView?.booksTableView.insertRows(at: [newRowIndexPath], with: .automatic)
             }
         }
     }
@@ -42,7 +45,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension BooksViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         self.bookList.count
     }
@@ -54,8 +57,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let viewController = UIStoryboard.init(name: "Main", bundle: Bundle.main)
-            .instantiateViewController(withIdentifier: "BookDetails") as! BookDetailsViewController
-        self.navigationController?.pushViewController(viewController, animated: true)
+//        let viewController = UIStoryboard.init(name: "Main", bundle: Bundle.main)
+//            .instantiateViewController(withIdentifier: "BookDetails") as! BookDetailsViewController
+//        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
