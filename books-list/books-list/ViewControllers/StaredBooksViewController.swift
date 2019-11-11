@@ -37,6 +37,7 @@ class StaredBooksViewController: UIViewController {
     }
     
     private func loadBooks() {
+        self.booksView?.activityIndicator.startAnimating()
         let starredBooks = UserDefaults.standard.stringArray(forKey: "StaredBooks")
         starredBooks?.forEach({ (bookId) in
             APIManager.shared.book(byId: bookId) { (item, error) in
@@ -44,6 +45,10 @@ class StaredBooksViewController: UIViewController {
                     self.bookList.append(item!)
                     let newRowIndexPath = IndexPath.init(row: self.bookList.count - 1, section: 0)
                     self.booksView?.booksTableView.insertRows(at: [newRowIndexPath], with: .automatic)
+                    
+                    if self.bookList.count == starredBooks?.count {
+                        self.booksView?.activityIndicator.stopAnimating()
+                    }
                 }
             }
         })

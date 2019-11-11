@@ -31,6 +31,7 @@ class BooksViewController: UIViewController {
     }
     
     private func loadBooks() {
+        self.booksView?.activityIndicator.startAnimating()
         APIManager.shared.books(byAuthor: "Tolkien") { (items, error) in
             guard let items = items else { return }
             items.forEach { (item) in
@@ -38,6 +39,7 @@ class BooksViewController: UIViewController {
                 let newRowIndexPath = IndexPath.init(row: self.bookList.count - 1, section: 0)
                 self.booksView?.booksTableView.insertRows(at: [newRowIndexPath], with: .automatic)
             }
+            self.booksView?.activityIndicator.stopAnimating()
         }
     }
     

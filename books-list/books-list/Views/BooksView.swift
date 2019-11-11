@@ -9,10 +9,19 @@
 import UIKit
 
 class BooksView: UIView {
+    
     lazy var booksTableView: UITableView = {
         let table = UITableView()
         table.translatesAutoresizingMaskIntoConstraints = false
         return table
+    }()
+    
+    lazy var activityIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView()
+        indicator.hidesWhenStopped = true
+        indicator.style = .large
+        indicator.translatesAutoresizingMaskIntoConstraints = false
+        return indicator
     }()
     
     override init(frame: CGRect) {
@@ -28,6 +37,7 @@ class BooksView: UIView {
 extension BooksView: ViewCode {
     func buildViewHierarchy() {
         addSubview(booksTableView)
+        addSubview(activityIndicator)
     }
     
     func setupConstraints() {
@@ -36,6 +46,11 @@ extension BooksView: ViewCode {
             booksTableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
             booksTableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             booksTableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            activityIndicator.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            activityIndicator.centerXAnchor.constraint(equalTo: self.centerXAnchor)
         ])
     }
     
